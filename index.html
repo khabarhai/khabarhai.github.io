@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<title>Khabar Hai</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+#accop, #accop2, #accop3,#accop4, #accop5, #accop6{
+-webkit-transition: height 0.7s ease-in-out;
+    -moz-transition: height 0.7s ease-in-out;
+    -o-transition: height 0.7s ease-in-out;
+    transition: height 0.7s ease-in-out;
+}
+
+#acc, #acc2, #acc3,#acc4, #acc5, #acc6{
+	border-top:1px white solid;
+}
+#mySidenav, #navbar{
+-webkit-transition: width 0.7s ease-in-out;
+    -moz-transition: width 0.7s ease-in-out;
+    -o-transition: width 0.7s ease-in-out;
+    transition: width 0.7s ease-in-out;
+	-moz-box-shadow: 0 0 10px #ccc;
+-webkit-box-shadow: 0 0 10px #ccc;
+box-shadow: 0 0 10px #ccc;
+
+
+}
+#page, #navbar{
+-webkit-transition: margin-right 0.7s ease-in-out;
+    -moz-transition: margin-right 0.7s ease-in-out;
+    -o-transition: margin-right 0.7s ease-in-out;
+    transition: margin-right 0.7s ease-in-out;
+
+}
+
+
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-sidenav a,.w3-sidenav h4 {font-weight:bold}
+::-webkit-scrollbar {
+cursor:pointer; 
+ width: 8px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.w3-sidenav::-webkit-scrollbar-thumb:window-inactive {
+	background-color:blue;
+}
+.w3-sidenav::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+.w3-sidenav::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 8px;
+  background-color:white;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.w3-sidenav::-webkit-scrollbar-thumb:window-inactive {
+	background-color:blue; 
+}
+
+
+
+
+@media (max-width:600px){
+
+#mySidenav{
+left:0;
+right:0;
+top:0;
+bottom:0;
+
+
+}
+
+
+
+
+}
+</style>
+
+
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-collapse w3-red w3-hide-medium w3-hide-small w3-animate-right" style="z-index:10;width:225px;scrollbar-base-color:blue; top:0;right:0; " id="mySidenav"><br>
+  <div class="w3-container" style="">
+    <img href="#" onclick="w3_close()" class="w3-right" src="c.png" style="width:25px; cursor:pointer;"/><br/><br/>
+    <img src="logo.png" style="width:150px; margin-left:20px;" class="w3-center"><br><br>
+    <h4 class="w3-padding-0" style="margin-left:40px; margin-top:0;"><b>Khabar Hai</b></h4>
+    <p class="w3-small"><i>गर  हो  सके  तो  अब  कोई  शमा  जलाइए ..</i></p>
+
+    <div  style=""id="acc"onclick="toggleac()" >
+  <a href="#" class="w3-padding">List 1</a>
+  </div>
+    <div id="accop"  style="width:100%;height:0px;display: block; overflow: hidden; word-wrap:break-word" >
+  <a href="#" class="w3-padding">SubList 1</a>
+  <a href="#" class="w3-padding">Sub-List2</a>
+  <a href="#" class="w3-padding">Sub-list3</a>
+  </div>
+    <div  style=""id="acc2"onclick="toggleac2()" >
+  <a href="#" class="w3-padding">List 1</a>
+  </div>
+    <div id="accop2"  style="width:100%;height:0px;display: block; overflow: hidden; word-wrap:break-word" >
+  <a href="#" class="w3-padding">SubList 1</a>
+  <a href="#" class="w3-padding">Sub-List2</a>
+  <a href="#" class="w3-padding">Sub-list3</a>
+  </div>
+  <div style=""id="acc3"onclick="toggleac3()" >
+  <a href="#" class="w3-padding">List 1</a>
+  </div>
+    <div id="accop3"  style="width:100%;height:0px;display: block; overflow: hidden; word-wrap:break-word" >
+  <a href="#" class="w3-padding">SubList 1</a>
+  <a href="#" class="w3-padding">Sub-List2</a>
+  <a href="#" class="w3-padding">Sub-list3</a>
+  </div>
+  <div class=" w3-padding-top w3-large">
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-red w3-show-inline-block"><i class="fa fa-pinterest-p"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-grey w3-show-inline-block"><i class="fa fa-flickr"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+  </div>
+    </div>
+</nav>
+    <span id="nav-icon1"class="w3-xxlarge w3-padding-small w3-card-4 w3-btn w3-red w3-hover-text-yellow w3-hide-small w3-hide-medium" onclick="w3_open()" style=" z-index:3;width:62px; border-radius:31px; position:fixed; top:10px; right:10px;">
+ <i class="material-icons">menu</i>
+</span> 
+  <nav class="w3-navbar w3-red w3-hide-small w3-card-4 w3-hide-medium" id="navbar" style=" height:53px; position:fixed; bottom:0; width:100%; margin-right:225px;">
+
+<span class="w3-red w3-padding" id="whatsup" style="position:relative; top:15px;z-index:5;">What's Up?</span>
+<marquee style="position:absolute; top:15px; z-index:2;" scrollamount="7">Modi kissed Obama and said,"फिर मिलेंगे चलते चलते".</marquee>
+</nav>
+<nav class="w3-sidenav  w3-hide-large w3-red w3-animate-top" style="z-index:10;width:100%; top:0;display:none; " id="mySidenav2"><br>
+  <div class="w3-container w3-center" style="">
+    <img href="#" onclick="w3_close2()" class="w3-right" src="c.png" style="width:25px; cursor:pointer;"/><br/><br/>
+    <img src="logo.png" style="width:150px; margin-left:20px;" class="w3-center"><br><br>
+    <h4 class="w3-padding-0" style="margin-left:40px; margin-top:0;"><b>Khabar Hai</b></h4>
+    <p class="w3-small"><i>गर  हो  सके  तो  अब  कोई  शमा  जलाइए ..</i></p>
+
+    <div  style=""id="acc4"onclick="toggleac4()" >
+  <a href="#" class="w3-padding">List 1</a>
+  </div>
+    <div id="accop4"  style="width:100%;height:0px;display: block; overflow: hidden; word-wrap:break-word" >
+  <a href="#" class="w3-padding">SubList 1</a>
+  <a href="#" class="w3-padding">Sub-List2</a>
+  <a href="#" class="w3-padding">Sub-list3</a>
+  </div>
+    <div  style=""id="acc5"onclick="toggleac5()" >
+  <a href="#" class="w3-padding">List 1</a>
+  </div>
+    <div id="accop5"  style="width:100%;height:0px;display: block; overflow: hidden; word-wrap:break-word" >
+  <a href="#" class="w3-padding">SubList 1</a>
+  <a href="#" class="w3-padding">Sub-List2</a>
+  <a href="#" class="w3-padding">Sub-list3</a>
+  </div>
+  <div style=""id="acc6"onclick="toggleac6()" >
+  <a href="#" class="w3-padding">List 1</a>
+  </div>
+    <div id="accop6"  style="width:100%;height:0px;display: block; overflow: hidden; word-wrap:break-word" >
+  <a href="#" class="w3-padding">SubList 1</a>
+  <a href="#" class="w3-padding">Sub-List2</a>
+  <a href="#" class="w3-padding">Sub-list3</a>
+  </div>
+  <div class=" w3-padding-top w3-large">
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-red w3-show-inline-block"><i class="fa fa-pinterest-p"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-grey w3-show-inline-block"><i class="fa fa-flickr"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+  </div>
+    </div>
+
+</nav>
+
+<nav class="w3-navbar w3-top w3-hide-large w3-red w3-card-4" style="height:45px;">
+<span class="w3-left" style="margin:5px 5px 5px 5px; cursor:pointer;"><img src="logo.png" style="height:35px; " /></span> <span class="w3-right" style="position:absolute; right:10px;top:10px;"onclick="w3_open2()"><i class="material-icons">menu</i></span>
+Khabar Hai
+</nav>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" id="page" style="margin-right:225px;" >
+
+  <!-- Header -->
+<div class="w3-container">
+  <div class="mad-col m8 mad-white mad-center">
+		<div class="mad-container" >
+			
+			<div class="mad-container mad-white mad-leftbar mad-border-green" style="margin-top:50px;margin-bottom:50px;">
+  
+
+			<h1>Title of Post<br/>in line2 </h1>
+		</div>
+		
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  
+		  
+		</div>
+	</div>
+	 <div class="mad-col m4 mad-green mad-center" id="sidebar-wrapper">
+		<div class="mad-container mad-red">
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		</div>
+	</div>
+	
+	</div>
+<div class="w3-container">
+  <div class="mad-col m8 mad-white mad-center">
+		<div class="mad-container" style="margin-top:250px;margin-bottom:29px;">
+			
+			<div class="mad-container mad-white mad-leftbar mad-border-green" style="margin-top:50px;margin-bottom:50px;">
+  <div class="w3-green" style="width:100%;height:40px;"id="acc"onclick="toggleac()" >
+open  
+  </div>
+
+ this is inside accordi
+  
+  
+  </div>
+
+			<h1>Title of Post<br/>in line2 </h1>
+		</div>
+		
+		  This is the post body
+		   This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  
+		  
+		</div>
+	</div>
+	 <div class="w3-col w3-container  w3-green w3-center" id="sidebar-wrapper">
+		<div class="w3-container w3-red">
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		</div>
+	</div>
+	
+	</div>
+
+  <div class="w3-col m8 mad-white mad-center">
+		<div class="w3-container" style="margin-top:250px;margin-bottom:29px;">
+			
+			<div class="mad-container mad-white mad-leftbar mad-border-green" style="margin-top:50px;margin-bottom:50px;">
+  
+
+			<h1>Title of Post<br/>in line2 </h1>
+		</div>
+		
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  This is the post body<br/>
+		  
+		  
+		</div>
+	</div>
+	 <div class="mad-col m4 mad-green mad-center" id="sidebar-wrapper">
+		<div class="mad-container mad-red">
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		  Sidebar Widget<br/><br/>
+		</div>
+	</div>
+	
+
+
+<!-- End page content -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+// Script to open and close sidenav
+function w3_open() {
+	 $("#nav-icon1").addClass("w3-hide-large");
+document.getElementById("mySidenav").style.display= "block";
+    document.getElementById("mySidenav").style.width = "225px";
+document.getElementById("page").style.marginRight= "225px";
+document.getElementById("whatsup").style.right="10px";
+document.getElementById("navbar").style.marginRight="220px";
+}
+ 
+function w3_close() {
+  $("#nav-icon1").removeClass("w3-hide-large");
+    document.getElementById("mySidenav").style.width = "0";
+document.getElementById("page").style.marginRight= "0";
+document.getElementById("whatsup").style.right="100px";
+document.getElementById("navbar").style.marginRight="0";
+}
+function w3_open2(){
+document.getElementById("mySidenav2").style.display="block";
+
+}
+function w3_close2(){
+document.getElementById("mySidenav2").style.display="none";
+
+}
+function toggleac(){
+if(document.getElementById("accop").style.height=="0px"){
+document.getElementById("accop3").style.height="0px";
+document.getElementById("accop2").style.height="0px";
+document.getElementById("accop").style.height="150px";
+}
+else if(document.getElementById("accop").style.height=="150px")
+document.getElementById("accop").style.height="0px";
+}
+function toggleac2(){
+if(document.getElementById("accop2").style.height=="0px"){
+document.getElementById("accop").style.height="0px";
+document.getElementById("accop3").style.height="0px";
+document.getElementById("accop2").style.height="150px";}
+else if(document.getElementById("accop2").style.height=="150px")
+document.getElementById("accop2").style.height="0px";
+}
+function toggleac3(){
+if(document.getElementById("accop3").style.height=="0px"){
+document.getElementById("accop").style.height="0px";
+document.getElementById("accop2").style.height="0px";
+document.getElementById("accop3").style.height="150px";}
+else if(document.getElementById("accop3").style.height=="150px")
+document.getElementById("accop3").style.height="0px";
+}
+
+function toggleac4(){
+if(document.getElementById("accop4").style.height=="0px"){
+document.getElementById("accop6").style.height="0px";
+document.getElementById("accop5").style.height="0px";
+document.getElementById("accop4").style.height="150px";
+}
+else if(document.getElementById("accop4").style.height=="150px")
+document.getElementById("accop4").style.height="0px";
+}
+function toggleac5(){
+if(document.getElementById("accop5").style.height=="0px"){
+document.getElementById("accop4").style.height="0px";
+document.getElementById("accop6").style.height="0px";
+document.getElementById("accop5").style.height="150px";}
+else if(document.getElementById("accop5").style.height=="150px")
+document.getElementById("accop5").style.height="0px";
+}
+function toggleac6(){
+if(document.getElementById("accop6").style.height=="0px"){
+document.getElementById("accop4").style.height="0px";
+document.getElementById("accop5").style.height="0px";
+document.getElementById("accop6").style.height="150px";}
+else if(document.getElementById("accop3").style.height=="150px")
+document.getElementById("accop6").style.height="0px";
+}
+</script>
+</body>
+</html>
+
